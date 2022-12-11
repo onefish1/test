@@ -8,9 +8,8 @@ jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
       - name: Download
-        uses: actions/checkout@v3
+        uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_HOST }} #服务器地址
           username: ${{ secrets.SERVER_USERNAME }} #用户名
