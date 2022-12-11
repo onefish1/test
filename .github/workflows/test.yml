@@ -15,6 +15,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }} #用户名
           key: ${{ secrets.SERVER_KEY }} #私钥 安全问题一定都以变量的方式传递！！！
           script: |
-            docker exec -it spider bash update.sh
+            docker exec spider bash update.sh
             echo 'test' > /root/test.txt
             
