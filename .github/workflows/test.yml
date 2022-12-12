@@ -21,6 +21,5 @@ jobs:
           key: ${{ secrets.SERVER_KEY }}
           envs: SERVER_WORKDIR
           script: |
-            echo '我是MT' > /root/a.txt
-            #docker exec spider bash SERVER_WORKDIR/shell/update.sh
+            docker exec spider bash SERVER_WORKDIR/shell/run_scripts_91.sh
             
