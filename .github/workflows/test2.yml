@@ -1,0 +1,25 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Download Y
+on:
+  push:
+    branches: [ "main" ]
+    paths-ignore:  # 下列文件的变动不触发
+      - 'aaa/a.txt'
+      - README.md
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download
+        uses: appleboy/ssh-action@master
+        env:
+          SERVER_WORKDIR: ${{ secrets.SERVER_WORKDIR }}
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_KEY }}
+          envs: SERVER_WORKDIR
+          script: |
+            echo '我是youtube' > /root/b.txt
+            #docker exec spider bash SERVER_WORKDIR/shell/run_scripts_ytb.sh
