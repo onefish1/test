@@ -21,5 +21,4 @@ jobs:
           key: ${{ secrets.SERVER_KEY }}
           envs: SERVER_WORKDIR
           script: |
-            echo '我是youtube' > /root/b.txt
-            #docker exec spider bash SERVER_WORKDIR/shell/run_scripts_ytb.sh
+            docker exec spider bash SERVER_WORKDIR/shell/run_scripts_ytb.sh
