@@ -4,6 +4,9 @@ name: Download 91
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:  # 下列文件的变动不触发
+      - 'bbb/b.txt'
+      - README.md
 jobs:
   bot:
     runs-on: ubuntu-latest
