@@ -21,4 +21,4 @@ jobs:
           key: ${{ secrets.SERVER_KEY }}
           envs: SERVER_WORKDIR
           script: |
-            docker exec spider bash SERVER_WORKDIR/shell/run_scripts_ytb.sh
+            docker exec spider bash SERVER_WORKDIR/shell/run_scripts_ytb.sh 1>/dev/null 2>&1 &
