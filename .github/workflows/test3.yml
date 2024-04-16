@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_KEY }}
           script: |
-            docker exec spider bash /usr/src/myapp/shell/run_scripts_91.sh 5 &
+            docker exec spider bash /usr/src/myapp/shell/run_scripts_ytb.sh 5 &
