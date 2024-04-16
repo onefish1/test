@@ -6,6 +6,7 @@ on:
     branches: [ "main" ]
     paths-ignore:  # 下列文件的变动不触发
       - 'bbb/b.txt'
+      - 'ccc/c.txt'
       - README.md
 jobs:
   bot:
