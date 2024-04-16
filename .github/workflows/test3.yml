@@ -6,7 +6,7 @@ on:
     branches: [ "main" ]
     paths-ignore:  # 下列文件的变动不触发
       - 'bbb/b.txt'
-      - 'ccc/c.txt'
+      - 'aaa/a.txt'
       - README.md
 jobs:
   bot:
@@ -19,5 +19,4 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_KEY }}
           script: |
-            docker exec spider bash /usr/src/myapp/shell/run_scripts_91.sh &
-            
+            docker exec spider bash /usr/src/myapp/shell/run_scripts_ytb.sh 5 &
